@@ -12,6 +12,7 @@
 
 # Widok dostępności stolików
 
+//DONE
 - `/tables`
   - wybór daty i godziny
   - tabela z listą rezerwacji oraz wydarzeń
@@ -19,6 +20,7 @@
     - każdy wiersz - 30 minut
     - ma przypominać widok tygodnia w kalendarzu Google, gdzie w kolumnach zamiast dni są różne stoliki
     - po kliknięciu rezerwacji lub eventu, przechodzimy na strone szczegółów
+//DONE
 - `/tables/booking/:id`
   - zawiera wszystkie informacje dotyczące rezerwacji
   - umożliwia edycję i zapisanie zmian
@@ -31,6 +33,7 @@
 
 # Widok kelnera
 
+//DONE
 - `/waiter`
   - zawiera tabelę
     - w wierszach stoliki
@@ -47,6 +50,7 @@
 
 # Widok kuchni
 
+//DONE
 - `/kitchen`
   - wyświetla listę zamówień w kolejności ich złożenia
   - lista musi zawierać

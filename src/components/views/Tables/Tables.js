@@ -17,41 +17,6 @@ const demoContent = [
   {time: '14:30 - 15:00', table1: '234', table2: null, table3: '567', table4: '789', table5: null, table6: '901'},
 ];
 
-const renderActions = status => {
-  switch (status) {
-    case 'free':
-      return (
-        <>
-          <Button>thinking</Button>
-          <Button>new order</Button>
-        </>
-      );
-    case 'thinking':
-      return (
-        <Button>new order</Button>
-      );
-    case 'ordered':
-      return (
-        <Button>prepared</Button>
-      );
-    case 'prepared':
-      return (
-        <Button>delivered</Button>
-      );
-    case 'delivered':
-      return (
-        <Button>paid</Button>
-      );
-    case 'paid':
-      return (
-        <Button>free</Button>
-      );
-    default:
-      return null;
-  }
-};
-
-
 const Tables = () => (
   <Paper className={styles.component}>
     <Table>
