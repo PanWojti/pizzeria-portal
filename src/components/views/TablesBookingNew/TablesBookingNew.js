@@ -21,7 +21,6 @@ const TablesBookingNew = () => (
                 required
                 id="name"
                 label="Required"
-                defaultValue="John Doe"
                 variant="outlined"
               />
             </form>
@@ -36,7 +35,6 @@ const TablesBookingNew = () => (
                 id="date"
                 label="Required"
                 type="date"
-                defaultValue="2017-05-24"
                 className={styles.textField}
                 InputLabelProps={{
                   shrink: true,
@@ -55,7 +53,6 @@ const TablesBookingNew = () => (
                 id="start-time"
                 label="Required"
                 type="time"
-                defaultValue="12:00"
                 className={styles.textField}
                 InputLabelProps={{
                   shrink: true,
@@ -77,7 +74,6 @@ const TablesBookingNew = () => (
                 id="end-time"
                 label="Required"
                 type="time"
-                defaultValue="12:30"
                 className={styles.textField}
                 InputLabelProps={{
                   shrink: true,
@@ -99,7 +95,6 @@ const TablesBookingNew = () => (
                 id="telephone"
                 label="Required"
                 type="tel"
-                defaultValue="123456789"
                 className={styles.textField}
                 InputLabelProps={{
                   shrink: true,

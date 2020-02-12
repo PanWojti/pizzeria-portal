@@ -67,6 +67,11 @@ const Kitchen = () => (
             </TableCell>
           </TableRow>
         ))}
+        <TableRow>
+          <TableCell>
+            <Button href={`${process.env.PUBLIC_URL}/waiter/order/new`} variant="outlined" color="primary">NEW ORDER</Button>
+          </TableCell>
+        </TableRow>
       </TableBody>
     </Table>
   </Paper>

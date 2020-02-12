@@ -24,6 +24,7 @@
 - `/tables/booking/:id`
   - zawiera wszystkie informacje dotyczące rezerwacji
   - umożliwia edycję i zapisanie zmian
+//DONE
 - `/tables/booking/new`
   - analogicznie do powyższej, bez początkowych informacji
 - `/tables/event/:id`
@@ -39,6 +40,7 @@
     - w wierszach stoliki
     - w kolumnach różne rodzaje informacji (status, czas od ostatniej aktywności)
     - w ostatniej kolumnie dostepne akcje dla danego stolika
+//IN PROGRESS
 - `/waiter/order/new`
   - numer stolika (edytowalny)
   - menu produktów
