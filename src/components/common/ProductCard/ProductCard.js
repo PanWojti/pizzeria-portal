@@ -36,15 +36,15 @@ const myStyles = theme => ({
 });
 
 const demoContent = [
-  {id: '1', product: 'pizza1', options: ['4','5','6']},
-  {id: '2', product: 'pizza2', options: ['4','5','6']},
-  {id: '3', product: 'pizza3', options: ['4','5','6']},
+  {id: '1', product: 'pizza1', options: [{opt1: '4'}, {opt2: '5'}, {opt3: '6'}]},
+  {id: '2', product: 'pizza2', options: [{opt1: '4'}, {opt2: '5'}, {opt3: '6'}]},
+  {id: '3', product: 'pizza3', options: [{opt1: '4'}, {opt2: '5'}, {opt3: '6'}]},
 ];
 
 function ProductCard(props)  {
   const { classes, children, className, ...other } = props;
   const [state, setState] = React.useState({
-    extCheese: true,
+    extCheese: false,
     extMeat: false,
     thcCrust: false,
   });
@@ -105,7 +105,7 @@ function ProductCard(props)  {
           </Grid>
           <Grid item xs={4}>
             <Typography className={clsx(classes.text, className)} {...other} color="textPrimary">
-            1
+              1
             </Typography>
           </Grid>
           <Grid item xs={4}>
