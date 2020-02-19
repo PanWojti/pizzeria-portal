@@ -37,8 +37,8 @@ const myStyles = theme => ({
 
 const demoContent = [
   {id: '1', product: 'pizza1', options: [{opt1: '4'}, {opt2: '5'}, {opt3: '6'}]},
-  {id: '2', product: 'pizza2', options: [{opt1: '4'}, {opt2: '5'}, {opt3: '6'}]},
-  {id: '3', product: 'pizza3', options: [{opt1: '4'}, {opt2: '5'}, {opt3: '6'}]},
+  {id: '2', product: 'pizza2', options: [{opt1: '5'}, {opt2: '6'}, {opt3: '7'}]},
+  {id: '3', product: 'pizza3', options: [{opt1: '6'}, {opt2: '7'}, {opt3: '8'}]},
 ];
 
 function ProductCard(props)  {

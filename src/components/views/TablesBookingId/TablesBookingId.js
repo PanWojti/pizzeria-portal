@@ -10,7 +10,7 @@ import Button from '@material-ui/core/Button';
 
 const TablesBookingId = () => (
   <Paper className={styles.component}>
-    <div>Booking Id: 123</div>
+    <div>Booking Id: Old</div>
     <Table>
       <TableBody>
         <TableRow>
