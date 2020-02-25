@@ -1,11 +1,11 @@
 {
   "tables": [
-    {id: '1', status: 'free', order: null},
-    {id: '2', status: 'thinking', order: null},
-    {id: '3', status: 'ordered', order: 123},
-    {id: '4', status: 'prepared', order: 234},
-    {id: '5', status: 'delivered', order: 345},
-    {id: '6', status: 'paid', order: 456},
+    {"id": "1", "status": "free", "order": "123"},
+    {"id": "2", "status": "thinking", "order": "null"},
+    {"id": "3", "status": "ordered", "order": "123"},
+    {"id": "4", "status": "prepared", "order": "234"},
+    {"id": "5", "status": "delivered", "order": "345"},
+    {"id": "6", "status": "paid", "order": "456"}
   ],
   "product": [
     {
@@ -208,135 +208,6 @@
           }
         }
       }
-    }
-  ],
-  "order": [],
-  "event": [
-    {
-      "id": 1,
-      "date": "2019-09-24",
-      "hour": "12:30",
-      "table": 1,
-      "repeat": false,
-      "duration": 2,
-      "ppl": 3,
-      "starters": []
-    },
-    {
-      "id": 2,
-      "date": "2019-09-24",
-      "hour": "16:00",
-      "table": 3,
-      "repeat": "daily",
-      "duration": 2,
-      "ppl": 3,
-      "starters": [
-        "bread",
-        "lemonWater"
-      ]
-    },
-    {
-      "id": 3,
-      "date": "2019-09-24",
-      "hour": "12:00",
-      "table": 3,
-      "repeat": "daily",
-      "duration": 1,
-      "ppl": 3,
-      "starters": [
-        "bread",
-        "lemonWater"
-      ]
-    },
-    {
-      "id": 4,
-      "date": "2019-09-24",
-      "hour": "13:00",
-      "table": 2,
-      "repeat": "daily",
-      "duration": 2,
-      "ppl": 3,
-      "starters": []
-    },
-    {
-      "id": 5,
-      "date": "2019-09-24",
-      "hour": "18:00",
-      "table": 2,
-      "repeat": "daily",
-      "duration": 2,
-      "ppl": 3,
-      "starters": [
-        "lemonWater"
-      ]
-    },
-    {
-      "id": 6,
-      "date": "2019-09-24",
-      "hour": "13:00",
-      "table": 1,
-      "repeat": "daily",
-      "duration": 3,
-      "ppl": 3,
-      "starters": [
-        "lemonWater"
-      ]
-    },
-    {
-      "id": 7,
-      "date": "2019-09-24",
-      "hour": "13:00",
-      "table": 3,
-      "repeat": "daily",
-      "duration": 2,
-      "ppl": 3,
-      "starters": [
-        "lemonWater"
-      ]
-    },
-    {
-      "id": 8,
-      "date": "2019-09-24",
-      "hour": "18:00",
-      "table": 1,
-      "repeat": "daily",
-      "duration": 2,
-      "ppl": 3,
-      "starters": []
-    },
-    {
-      "id": 9,
-      "date": "2019-11-15",
-      "hour": "18:00",
-      "table": 3,
-      "repeat": false,
-      "duration": 1,
-      "ppl": 3,
-      "starters": []
-    }
-  ],
-  "booking": [
-    {
-      "id": 1,
-      "date": "2019-09-25",
-      "hour": "20:00",
-      "table": 1,
-      "duration": 2,
-      "ppl": 4,
-      "starters": [
-        "water"
-      ]
-    },
-    {
-      "id": 2,
-      "date": "2019-11-08",
-      "hour": "19:00",
-      "table": 3,
-      "duration": 1,
-      "ppl": 1,
-      "phone": "123456789",
-      "address": "Dupa",
-      "starters": []
     }
   ]
 }

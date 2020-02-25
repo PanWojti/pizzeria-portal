@@ -17,6 +17,7 @@ class Waiter extends React.Component {
       active: PropTypes.bool,
       error: PropTypes.oneOfType([PropTypes.bool,PropTypes.string]),
     }),
+    updateStatus: PropTypes.func,
   }
 
   componentDidMount(){
@@ -24,34 +25,52 @@ class Waiter extends React.Component {
     fetchTables();
   }
 
-  renderActions(status){
+  changeTableStatus(tableId, status) {
+    if (status === 'free') {
+      status = 'thinking';
+    } else if (status === 'thinking') {
+      status = 'ordered';
+    } else if (status === 'ordered') {
+      status = 'prepared';
+    } else if (status === 'prepared') {
+      status = 'delivered';
+    } else if (status === 'delivered') {
+      status = 'paid';
+    } else if (status === 'paid') {
+      status = 'free';
+    }
+    const {updateStatus} = this.props;
+    updateStatus(tableId, status);
+  }
+
+  renderActions(status, tableId){
     switch (status) {
       case 'free':
         return (
           <>
-            <Button>thinking</Button>
+            <Button onClick={() => this.changeTableStatus(tableId, status)}>thinking</Button>
             <Button>new order</Button>
           </>
         );
       case 'thinking':
         return (
-          <Button>new order</Button>
+          <Button onClick={() => this.changeTableStatus(tableId, status)}>new order</Button>
         );
       case 'ordered':
         return (
-          <Button>prepared</Button>
+          <Button onClick={() => this.changeTableStatus(tableId, status)}>prepared</Button>
         );
       case 'prepared':
         return (
-          <Button>delivered</Button>
+          <Button onClick={() => this.changeTableStatus(tableId, status)}>delivered</Button>
         );
       case 'delivered':
         return (
-          <Button>paid</Button>
+          <Button onClick={() => this.changeTableStatus(tableId, status)}>paid</Button>
         );
       case 'paid':
         return (
-          <Button>free</Button>
+          <Button onClick={() => this.changeTableStatus(tableId, status)}>free</Button>
         );
       default:
         return null;
@@ -103,7 +122,7 @@ class Waiter extends React.Component {
                     )}
                   </TableCell>
                   <TableCell>
-                    {this.renderActions(row.status)}
+                    {this.renderActions(row.status, row.id)}
                   </TableCell>
                 </TableRow>
               ))}
