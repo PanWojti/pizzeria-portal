@@ -26,54 +26,39 @@ class Waiter extends React.Component {
   }
 
   changeTableStatus(tableId, status) {
-    if (status === 'free') {
-      status = 'thinking';
-    } else if (status === 'thinking') {
-      status = 'ordered';
-    } else if (status === 'ordered') {
-      status = 'prepared';
-    } else if (status === 'prepared') {
-      status = 'delivered';
-    } else if (status === 'delivered') {
-      status = 'paid';
-    } else if (status === 'paid') {
-      status = 'free';
-    }
+    const statusChangeMap = {
+      free: 'thinking',
+      thinking: 'ordered',
+      ordered: 'prepared',
+      prepared: 'delivered',
+      delivered: 'paid',
+      paid: 'free',
+    };
     const {updateStatus} = this.props;
-    updateStatus(tableId, status);
+    updateStatus(tableId, statusChangeMap[status]);
   }
 
   renderActions(status, tableId){
-    switch (status) {
-      case 'free':
-        return (
-          <>
-            <Button onClick={() => this.changeTableStatus(tableId, status)}>thinking</Button>
-            <Button>new order</Button>
-          </>
-        );
-      case 'thinking':
-        return (
-          <Button onClick={() => this.changeTableStatus(tableId, status)}>new order</Button>
-        );
-      case 'ordered':
-        return (
-          <Button onClick={() => this.changeTableStatus(tableId, status)}>prepared</Button>
-        );
-      case 'prepared':
-        return (
-          <Button onClick={() => this.changeTableStatus(tableId, status)}>delivered</Button>
-        );
-      case 'delivered':
-        return (
-          <Button onClick={() => this.changeTableStatus(tableId, status)}>paid</Button>
-        );
-      case 'paid':
-        return (
-          <Button onClick={() => this.changeTableStatus(tableId, status)}>free</Button>
-        );
-      default:
-        return null;
+    const actionsButtonsMap = {
+      free: ['thinking','new order'],
+      thinking: 'ordered',
+      ordered: 'prepared',
+      prepared: 'delivered',
+      delivered: 'paid',
+      paid: 'free',
+    };
+
+    if (typeof(actionsButtonsMap[status]) === 'string') {
+      return (
+        <Button onClick={() => this.changeTableStatus(tableId, status)}>{actionsButtonsMap[status]}</Button>
+      );
+    } else {
+      return (
+        <>
+          <Button onClick={() => this.changeTableStatus(tableId, status)}>{actionsButtonsMap[status][0]}</Button>
+          <Button onClick={() => this.changeTableStatus(tableId, status)}>{actionsButtonsMap[status][1]}</Button>
+        </>
+      );
     }
   }
 
